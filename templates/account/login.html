@@ -19,25 +19,34 @@
 					</span>
 
                     <span class="login100-form-title p-b-34 p-t-27">
-						Sign Up
+						Log In
 					</span>
+                    {% if form.errors %}
+                        {{ form.errors }}
+
+                    {% endif %}
 
                     {{ form|crispy }}
 
+                    <span>Not have an Account?<a class="txt1" href="{% url 'account_signup' %}">
+                    Sign up
+                </a></span>
+
                     <div class="container-login100-form-btn mt-3">
                         <button class="login100-form-btn">
-                            SignUp
+                            LogIn
                         </button>
                     </div>
-                    <div class="text-center p-t-90">
-                    You not have Account?
-                        <a class="txt1" href="{% url 'account_login' %}">
-                            Login
-                        </a>
-                    </div>
-
                 </form>
+
+
+                <div class="text-center p-t-90">
+                    <a class="txt1" href="{% url 'account_reset_password' %}">
+                        Forgot Password?
+                    </a>
+                </div>
             </div>
+
         </div>
     </div>
 
