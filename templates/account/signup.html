@@ -12,21 +12,29 @@
     <div class="limiter">
         <div class="container-login100" style="background-image: url('{% static 'images/bg-01.jpg' %}');">
             <div class="wrap-login100">
-                    <span class="login100-form-logo">
-						<i class="zmdi zmdi-landscape"></i>
-					</span>
+                <form class="login100-form validate-form" method="post">
+                    {% csrf_token %}
 
                     <span class="login100-form-title p-b-34 p-t-27">
-						Password Reset
+						SignUp
 					</span>
 
-                <div class="text-center p-t-90">
-                    <p class="txt1">
-                        Please Check Your Email!
-                    </p>
-                </div>
-            </div>
+                    {{ form|crispy }}
 
+                    <div class="container-login100-form-btn mt-3">
+                        <button class="login100-form-btn">
+                            SignUp
+                        </button>
+                    </div>
+                    <div class="text-center p-t-90">
+                    You not have Account?
+                        <a class="txt1" href="{% url 'account_login' %}">
+                            Login
+                        </a>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
 
