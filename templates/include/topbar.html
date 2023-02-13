@@ -16,10 +16,18 @@
                     <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My
                         Account
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <button class="dropdown-item" type="button">Sign in</button>
-                        <button class="dropdown-item" type="button">Sign up</button>
-                    </div>
+                    {% if request.user.is_authenticated %}
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">{{ request.user.email }}</button>
+                            <button class="dropdown-item" type="button"><a href="{% url 'account_logout' %}">Logout</a>
+                            </button>
+                        </div>
+                    {% else %}
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">Sign in</button>
+                            <button class="dropdown-item" type="button">Sign up</button>
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="btn-group mx-2">
                     <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">USD
