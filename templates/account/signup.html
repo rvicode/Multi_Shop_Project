@@ -1,0 +1,52 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    SignUp
+{% endblock %}
+
+{% block content %}
+
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('{% static 'images/bg-01.jpg' %}');">
+        <div class="wrap-login100">
+            <form class="login100-form validate-form" method="post">
+                {% csrf_token %}
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+                <span class="login100-form-title p-b-34 p-t-27">
+						Sign Up
+					</span>
+
+                {{ form|crispy }}
+
+                <div class="contact100-form-checkbox">
+                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                    <label class="label-checkbox100" for="ckb1">
+                        Remember me
+                    </label>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn">
+                        SignUp
+                    </button>
+                </div>
+
+                <div class="text-center p-t-90">
+                    <a class="txt1" href="#">
+                        Forgot Password?
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="dropDownSelect1"></div>
+{% endblock %}
