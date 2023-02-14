@@ -20,4 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('accounts/', include('allauth.urls')),
+
+    # Rosetta Package
+    path('rosetta/', include('rosetta.urls')),
 ]
