@@ -2,9 +2,10 @@
 
 {% load static %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}
-    SignUp
+    {% translate 'SignUp' %}
 {% endblock %}
 
 {% block content %}
@@ -16,23 +17,22 @@
                     {% csrf_token %}
 
                     <span class="login100-form-title p-b-34 p-t-27">
-						SignUp
+						{% translate 'SignUp' %}
 					</span>
 
                     {{ form|crispy }}
 
                     <div class="container-login100-form-btn mt-3">
                         <button class="login100-form-btn">
-                            SignUp
+                            {% translate 'SignUp' %}
                         </button>
                     </div>
                     <div class="text-center p-t-90">
-                    You not have Account?
+                        {% translate 'Do You have Account?' %}
                         <a class="txt1" href="{% url 'account_login' %}">
-                            Login
+                            {% translate 'login' %}
                         </a>
                     </div>
-
                 </form>
             </div>
         </div>

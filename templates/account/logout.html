@@ -2,9 +2,10 @@
 
 {% load static %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}
-    SignUp
+    {% translate 'logout' %}
 {% endblock %}
 
 {% block content %}
@@ -15,11 +16,11 @@
                 <form class="login100-form validate-form" method="post">
                     {% csrf_token %}
                     <span class="login100-form-title p-b-34 p-t-27">
-						Are you sure you want to sign out?
+						{% translate 'Are you sure you want to sign out?' %}
 					</span>
                     <div class="container-login100-form-btn mt-3">
                         <button class="login100-form-btn">
-                            Yes
+                            {% translate 'Yes' %}
                         </button>
                     </div>
                 </form>
