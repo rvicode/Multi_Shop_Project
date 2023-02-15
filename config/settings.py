@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # My Apps
     'home.apps.HomeConfig',
     'accounts.apps.AccountsConfig',
+    'product.apps.ProductConfig',
 
     # My Package
     'allauth',
