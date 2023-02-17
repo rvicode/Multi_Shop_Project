@@ -14,7 +14,8 @@ class Product(models.Model):
     short_description = models.TextField(verbose_name=_("Short Description"))
     description = models.TextField(verbose_name=_("Description"))
     price = models.PositiveIntegerField(verbose_name=_("Price"))
-    score = models.CharField(max_length=20, choices=scores)
+    image = models.ImageField(upload_to='ProductImage/', blank=True, verbose_name=_("Image"))
+    score = models.CharField(max_length=20, choices=scores, blank=True, null=True, verbose_name=_("Score"))
 
     def __str__(self):
         return self.name_product

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-17 11:00+0330\n"
+"POT-Creation-Date: 2023-02-17 11:42+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,10 +33,18 @@ msgstr "توضیح"
 msgid "Price"
 msgstr "قیمت"
 
-#: .\models.py:23
+#: .\models.py:17
+msgid "Image"
+msgstr "تصاویر"
+
+#: .\models.py:18
+msgid "Score"
+msgstr "نمره"
+
+#: .\models.py:24
 msgid "product"
 msgstr "محصول"
 
-#: .\models.py:24
+#: .\models.py:25
 msgid "products"
 msgstr "محصول ها"
