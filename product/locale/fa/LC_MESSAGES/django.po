@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-18 10:03+0330\n"
+"POT-Creation-Date: 2023-02-18 10:48+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,6 +49,11 @@ msgstr "محصول"
 msgid "products"
 msgstr "محصولات"
 
+#: .\templates\product\product_detail.html:7
+#: .\templates\product\product_detail.html:19
+msgid "Product Detail"
+msgstr "جزیات محصول"
+
 #: .\templates\product\product_detail.html:17
 msgid "Home"
 msgstr "خانه"
@@ -56,10 +61,6 @@ msgstr "خانه"
 #: .\templates\product\product_detail.html:18
 msgid "Product"
 msgstr "محصول"
-
-#: .\templates\product\product_detail.html:19
-msgid "Product Detail"
-msgstr "جزیات محصول"
 
 #: .\templates\product\product_detail.html:48
 msgid "$"
