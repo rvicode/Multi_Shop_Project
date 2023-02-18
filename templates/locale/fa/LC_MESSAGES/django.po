@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-14 11:59+0330\n"
+"POT-Creation-Date: 2023-02-18 10:35+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,3 +80,19 @@ msgstr "حسابی دارید؟"
 #: .\account\signup.html:33
 msgid "login"
 msgstr "ورود"
+
+#: .\include\navbar.html:8
+msgid "Categories"
+msgstr "دسته بندی"
+
+#: .\include\navbar.html:37
+msgid "Home"
+msgstr "خانه"
+
+#: .\include\navbar.html:38
+msgid "Products"
+msgstr "محصولات"
+
+#: .\include\navbar.html:40
+msgid "Contact"
+msgstr "ارتباط با ما"

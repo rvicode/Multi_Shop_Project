@@ -1,6 +1,9 @@
 {% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
 <!DOCTYPE html>
-<html lang="en">
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}" lang="{{ LANGUAGE_CODE }}">
 
 <head>
     <title>{% block title %}{% endblock %}</title>
@@ -8,28 +11,28 @@
 </head>
 
 <body>
-<!-- Topbar Start -->
-{% include 'include/topbar.html' %}
-<!-- Topbar End -->
+    <!-- Topbar Start -->
+    {% include 'include/topbar.html' %}
+    <!-- Topbar End -->
 
 
-<!-- Navbar Start -->
-{% include 'include/navbar.html' %}
-<!-- Navbar End -->
-{% block content %}
+    <!-- Navbar Start -->
+    {% include 'include/navbar.html' %}
+    <!-- Navbar End -->
+    {% block content %}
 
-{% endblock %}
-
-
-<!-- Footer Start -->
-{% include 'include/footer.html' %}
-<!-- Footer End -->
+    {% endblock %}
 
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <!-- Footer Start -->
+    {% include 'include/footer.html' %}
+    <!-- Footer End -->
 
-{% include 'include/script.html' %}
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    {% include 'include/script.html' %}
 
 </body>
 
