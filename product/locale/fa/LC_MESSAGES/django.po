@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-17 11:42+0330\n"
+"POT-Creation-Date: 2023-02-18 10:03+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgstr "نام محصول"
 msgid "Short Description"
 msgstr "توضیح کوتاه"
 
-#: .\models.py:15
+#: .\models.py:15 .\templates\product\product_detail.html:77
 msgid "Description"
 msgstr "توضیح"
 
@@ -47,4 +47,32 @@ msgstr "محصول"
 
 #: .\models.py:25
 msgid "products"
-msgstr "محصول ها"
+msgstr "محصولات"
+
+#: .\templates\product\product_detail.html:17
+msgid "Home"
+msgstr "خانه"
+
+#: .\templates\product\product_detail.html:18
+msgid "Product"
+msgstr "محصول"
+
+#: .\templates\product\product_detail.html:19
+msgid "Product Detail"
+msgstr "جزیات محصول"
+
+#: .\templates\product\product_detail.html:48
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\product\product_detail.html:65
+msgid "Add To Cart"
+msgstr "اضافه کردن به سبد خرید"
+
+#: .\templates\product\product_detail.html:79
+msgid "Reviews"
+msgstr "بازدید ها"
+
+#: .\templates\product\product_detail.html:83
+msgid "Product Description"
+msgstr "توضیحات محصول"
