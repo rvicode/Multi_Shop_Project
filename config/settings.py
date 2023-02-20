@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'crispy_forms',
     'rosetta',
+    'django_cleanup',
 ]
 
 SITE_ID = 1
