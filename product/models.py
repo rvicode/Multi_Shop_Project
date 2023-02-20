@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext as _
+import datetime
+
 from accounts.models import CustomUser
 
 
@@ -17,6 +19,9 @@ class Product(models.Model):
     price = models.PositiveIntegerField(verbose_name=_("Price"))
     image = models.ImageField(upload_to='ProductImage/', blank=True, verbose_name=_("Image"))
     score = models.CharField(max_length=20, choices=scores, blank=True, null=True, verbose_name=_("Score"))
+
+    datetime_created = models.DateTimeField(auto_now_add=True)
+    datetime_modified = models.DateTimeField(auto_now=True, verbose_name="Date Time Modified")
 
     def __str__(self):
         return self.name_product
