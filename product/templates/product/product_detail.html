@@ -98,8 +98,6 @@
                                                 <h6>{{ comments.username }}<small>
                                                     <i>{{ comments.datetime_modified }}</i></small></h6>
                                                 <p>{{ comments.massage }}</p>
-                                                <br>
-                                                <button type="button">{% translate 'Reply' %}</button>
                                             </div>
                                         </div>
                                     {% endfor %}
@@ -146,4 +144,9 @@
     </div>
     <!-- Shop Detail End -->
 
+    <script>
+        function set_value(id) {
+            document.getElementById('parent_id').value = id;
+        }
+    </script>
 {% endblock %}

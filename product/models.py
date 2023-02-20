@@ -35,8 +35,6 @@ class Comment(models.Model):
     username = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="comment",
                                  verbose_name="Username")
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="comment", verbose_name=_("Product"))
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, related_name='reply', null=True, blank=True,
-                               verbose_name="Reply comment")
     massage = models.TextField(verbose_name="Massage")
 
     datetime_created = models.DateTimeField(auto_now_add=True, verbose_name="Date Time Created")

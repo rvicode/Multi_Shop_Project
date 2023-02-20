@@ -11,5 +11,5 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ['username', 'product', 'parent', 'massage', 'datetime_created']
-    search_fields = ['username', 'product', 'parent', 'message']
+    list_display = ['username', 'product', 'massage', 'datetime_created']
+    search_fields = ['username', 'product', 'message']
