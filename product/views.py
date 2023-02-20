@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Product, Comment
+from .models import Product, Category
 
 
 def product_detail_view(request, pk):

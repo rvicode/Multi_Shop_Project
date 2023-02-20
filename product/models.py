@@ -1,8 +1,22 @@
 from django.db import models
 from django.utils.translation import gettext as _
-import datetime
 
 from accounts.models import CustomUser
+
+
+class Category(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='CategoryiImage/')
+
+    datetime_created = models.DateTimeField(auto_now_add=True, verbose_name="Date Time Created")
+    datetime_modified = models.DateTimeField(auto_now=True, verbose_name="Date Time Modified")
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _("Category")
+        verbose_name_plural = _("Categorys")
 
 
 class Product(models.Model):
@@ -14,6 +28,7 @@ class Product(models.Model):
         ('perfect', 5)
     )
     name_product = models.CharField(max_length=100, verbose_name=_("Name Product"))
+    category = models.ManyToManyField(Category, related_name="category", verbose_name=_("Category"), null=True, blank=True)
     short_description = models.TextField(verbose_name=_("Short Description"))
     description = models.TextField(verbose_name=_("Description"))
     price = models.PositiveIntegerField(verbose_name=_("Price"))
