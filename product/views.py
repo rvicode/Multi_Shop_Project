@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404, HttpResponse
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 
 from .models import Product, Comment
 from .forms import CommentForm
@@ -19,10 +21,11 @@ def product_detail_view(request, pk):
 
             if username and product_id and message:
                 Comment.objects.create(username=username, product=product_id, massage=message)
-                return render(request, 'product/product_detail.html', {'product': product})
+                messages.success(request, _("The Comment Was Sent"))
+                return redirect(reverse('product:product_detail', args=[str(product.id)]))
 
         else:
-            return HttpResponse("Error")
+            return messages.error(request, _("Please check your form!"))
 
     else:
         form = CommentForm()
