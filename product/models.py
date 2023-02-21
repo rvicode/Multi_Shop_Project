@@ -47,12 +47,20 @@ class Product(models.Model):
 
 
 class Comment(models.Model):
+    SCORE_CHOICE = (
+        (_('Bad'), _('Bad')),
+        (_('Not Bad'), _('Not Bad')),
+        (_('Good'), _('Good')),
+        (_('Very Good'), _('Very Good')),
+        (_('Perfect'), _('Perfect')),
+    )
     username = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="comment", verbose_name="Username")
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="comment", verbose_name=_("Product"))
-    massage = models.TextField(verbose_name="Massage")
+    massage = models.TextField(verbose_name=_("Massage"))
+    score = models.CharField(max_length=15, choices=SCORE_CHOICE, null=True, blank=True, verbose_name=_("Score"))
 
-    datetime_created = models.DateTimeField(auto_now_add=True, verbose_name="Date Time Created")
-    datetime_modified = models.DateTimeField(auto_now=True, verbose_name="Date Time Modified")
+    datetime_created = models.DateTimeField(auto_now_add=True, verbose_name=_("Date Time Created"))
+    datetime_modified = models.DateTimeField(auto_now=True, verbose_name=_("Date Time Modified"))
 
     def __str__(self):
         return str(self.massage)

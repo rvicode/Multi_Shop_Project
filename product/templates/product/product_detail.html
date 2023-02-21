@@ -96,8 +96,12 @@
                                                  style="width: 45px;">
                                             <div class="media-body">
                                                 <h6>{{ comments.username }}<small>
+                                                    <br>
+                                                    <h6>{{ comments.score }}</h6>
+                                                    <br>
                                                     <i>{{ comments.datetime_modified }}</i></small></h6>
                                                 <p>{{ comments.massage }}</p>
+                                                <hr>
                                             </div>
                                         </div>
                                     {% endfor %}
@@ -107,21 +111,17 @@
                                     <h4 class="mb-4">{% translate 'Leave a review' %}</h4>
                                     <small>
                                         {% translate 'Your email address will not be published. Required fields are marked*' %}
-                                        </small>
+                                    </small>
                                     <form method="post">
                                         {% csrf_token %}
                                         <div class="d-flex my-3">
                                             <p class="mb-0 mr-2">{% translate 'Your Rating * :' %}</p>
                                             <div class="text-primary">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
+                                                {{ form.score }}
                                             </div>
                                         </div>
-                                        {{ form.label }}
-                                        {{ form }}
+                                        {{ form.massage.label }}
+                                        {{ form.massage }}
                                         <div class="form-group mb-0">
                                             <input type="submit" value="Leave Your Review" class="btn btn-primary px-3">
                                         </div>
@@ -136,9 +136,4 @@
     </div>
     <!-- Shop Detail End -->
 
-    <script>
-        function set_value(id) {
-            document.getElementById('parent_id').value = id;
-        }
-    </script>
 {% endblock %}

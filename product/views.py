@@ -18,9 +18,10 @@ def product_detail_view(request, pk):
             username = request.user
             product_id = product
             message = form.cleaned_data.get("massage")
+            score = form.cleaned_data.get("score")
 
             if username and product_id and message:
-                Comment.objects.create(username=username, product=product_id, massage=message)
+                Comment.objects.create(username=username, product=product_id, score=score, massage=message)
                 messages.success(request, _("The Comment Was Sent"))
                 return redirect(reverse('product:product_detail', args=[str(product.id)]))
 
