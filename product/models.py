@@ -47,8 +47,7 @@ class Product(models.Model):
 
 
 class Comment(models.Model):
-    username = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="comment",
-                                 verbose_name="Username")
+    username = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="comment", verbose_name="Username")
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="comment", verbose_name=_("Product"))
     massage = models.TextField(verbose_name="Massage")
 
