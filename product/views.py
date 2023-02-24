@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
+from django.views import generic
 
 from .models import Product, Comment
 from .forms import CommentForm
@@ -32,3 +33,10 @@ def product_detail_view(request, pk):
         form = CommentForm()
     return render(request, 'product/product_detail.html',
                   {'product': product, 'product_list': product_list, 'form': form})
+
+
+class ProductListView(generic.ListView):
+    model = Product
+    template_name = "product/all_product.html"
+    context_object_name = "product"
+    paginate_by = 12
