@@ -8,46 +8,114 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-18 10:48+0330\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2023-02-24 18:36+0330\n"
+"PO-Revision-Date: 2023-02-24 18:46+0330\n"
+"Last-Translator:   <arvin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\models.py:13
-msgid "Name Product"
-msgstr "نام محصول"
+#: .\forms.py:7 .\models.py:55
+msgid "Bad"
+msgstr "بد"
 
-#: .\models.py:14
-msgid "Short Description"
-msgstr "توضیح کوتاه"
+#: .\forms.py:8 .\models.py:56
+msgid "Not Bad"
+msgstr "بدک نیست"
 
-#: .\models.py:15 .\templates\product\product_detail.html:77
-msgid "Description"
-msgstr "توضیح"
+#: .\forms.py:9 .\models.py:57
+msgid "Good"
+msgstr "خوب"
 
-#: .\models.py:16
-msgid "Price"
-msgstr "قیمت"
+#: .\forms.py:10 .\models.py:58
+msgid "Very Good"
+msgstr "خیلی خوب"
 
-#: .\models.py:17
-msgid "Image"
-msgstr "تصاویر"
+#: .\forms.py:11 .\models.py:59
+msgid "Perfect"
+msgstr "عالی"
 
-#: .\models.py:18
+#: .\forms.py:22
+msgid "Hello My Name IS..."
+msgstr "سلام اسم من ..."
+
+#: .\forms.py:25
+msgid "Message"
+msgstr "متن"
+
+#: .\forms.py:26 .\models.py:37 .\models.py:64
 msgid "Score"
 msgstr "نمره"
 
-#: .\models.py:24
+#: .\models.py:19 .\models.py:32
+msgid "Category"
+msgstr "دسته بندی"
+
+#: .\models.py:20
+msgid "Categorys"
+msgstr "دسته بندی ها"
+
+#: .\models.py:31
+msgid "Name Product"
+msgstr "نام محصول"
+
+#: .\models.py:33
+msgid "Short Description"
+msgstr "توضیح کوتاه"
+
+#: .\models.py:34 .\templates\product\product_detail.html:77
+msgid "Description"
+msgstr "توضیح"
+
+#: .\models.py:35
+msgid "Price"
+msgstr "قیمت"
+
+#: .\models.py:36
+msgid "Image"
+msgstr "تصاویر"
+
+#: .\models.py:49
 msgid "product"
 msgstr "محصول"
 
-#: .\models.py:25
+#: .\models.py:50
 msgid "products"
 msgstr "محصولات"
+
+#: .\models.py:62 .\templates\product\product_detail.html:18
+msgid "Product"
+msgstr "محصول"
+
+#: .\models.py:63
+msgid "Massage"
+msgstr "متن"
+
+#: .\models.py:66
+msgid "Date Time Created"
+msgstr "تاریخ ساخته شده"
+
+#: .\models.py:67
+msgid "Date Time Modified"
+msgstr "تاریخ بروزرسانی"
+
+#: .\models.py:73
+msgid "Comment"
+msgstr "کامنت"
+
+#: .\models.py:74
+msgid "Comments"
+msgstr "کامنت ها"
+
+#: .\templates\product\all_product.html:198
+#: .\templates\product\all_product.html:200
+#: .\templates\product\product_detail.html:48
+#: .\templates\product\product_detail.html:159
+msgid "$"
+msgstr "تومان"
 
 #: .\templates\product\product_detail.html:7
 #: .\templates\product\product_detail.html:19
@@ -57,14 +125,6 @@ msgstr "جزیات محصول"
 #: .\templates\product\product_detail.html:17
 msgid "Home"
 msgstr "خانه"
-
-#: .\templates\product\product_detail.html:18
-msgid "Product"
-msgstr "محصول"
-
-#: .\templates\product\product_detail.html:48
-msgid "$"
-msgstr "تومان"
 
 #: .\templates\product\product_detail.html:65
 msgid "Add To Cart"
@@ -77,3 +137,29 @@ msgstr "بازدید ها"
 #: .\templates\product\product_detail.html:83
 msgid "Product Description"
 msgstr "توضیحات محصول"
+
+#: .\templates\product\product_detail.html:89
+#| msgid "Reviews"
+msgid "Review for"
+msgstr "بازدید های "
+
+#: .\templates\product\product_detail.html:111
+msgid "Leave a review"
+msgstr "متنی کامنت کنید"
+
+#: .\templates\product\product_detail.html:113
+msgid "Your email address will not be published. Required fields are marked*"
+msgstr ""
+"آدرس ایمیل شما منتشر نخواهد شد. فیلدهای مورد نیاز علامت گذاری شده اند*"
+
+#: .\templates\product\product_detail.html:118
+msgid "Your Rating * :"
+msgstr "امتیاز شما"
+
+#: .\views.py:26
+msgid "The Comment Was Sent"
+msgstr "کامنت فرستاده شد"
+
+#: .\views.py:30
+msgid "Please check your form!"
+msgstr "لطفا مشخصات خود را کامل وارد کنید"
