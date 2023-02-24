@@ -10,7 +10,7 @@ from .forms import CommentForm
 def product_detail_view(request, pk):
 
     product = get_object_or_404(Product, id=pk)
-    product_list = Product.objects.all()
+    product_list = Product.objects.all()[:5]
 
     if request.method == "POST":
         form = CommentForm(request.POST)
