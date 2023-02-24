@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import reverse
 from django.utils.translation import gettext as _
 
 from accounts.models import CustomUser
@@ -40,6 +41,9 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name_product
+
+    def get_absolute_url(self):
+        return reverse("product:product_detail", args=[str(self.id)])
 
     class Meta:
         verbose_name = _('product')
