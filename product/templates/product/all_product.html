@@ -181,58 +181,60 @@
                             </div>
                         </div>
                     </div>
-                    {% for products in product %}
-                        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
-                        <div class="product-item bg-light mb-4">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{ products.image.url }}" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i
-                                            class="fa fa-shopping-cart"></i></a>>
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                        {% for products in product %}
+                            <div class="product-item bg-light mb-4">
+                                <div class="product-img position-relative overflow-hidden">
+                                    <img class="img-fluid w-100" src="{{ products.image.url }}" alt="">
+                                    <div class="product-action">
+                                        <a class="btn btn-outline-dark btn-square" href=""><i
+                                                class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-center py-4">
+                                    <a class="h6 text-decoration-none text-truncate"
+                                       href="{% url 'product:product_detail' products.id %}">{{ products.name_product }}</a>
+                                    <div class="d-flex align-items-center justify-content-center mt-2">
+                                        <h5>{% translate '$' %}{{ products.price }}</h5>
+                                        <h6 class="text-muted ml-2">
+                                            <del>{% translate '$' %}{{ products.price }}</del>
+                                        </h6>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-center py-4">
-                                <a class="h6 text-decoration-none text-truncate"
-                                   href="{% url 'product:product_detail' products.id %}">{{ products.name_product }}</a>
-                                <div class="d-flex align-items-center justify-content-center mt-2">
-                                    <h5>{% translate '$' %}{{ products.price }}</h5>
-                                    <h6 class="text-muted ml-2">
-                                        <del>{% translate '$' %}{{ products.price }}</del>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                    <div class="col-12">
-                        <nav>
-                            <ul class="pagination justify-content-center">
-                                {% if page_obj.has_previous %}
-                                    <li class="page-item"><a class="page-link"
-                                                             href="?page={{ page_obj.previous_page_number }}">Previous</a>
-                                    </li>
-                                {% else %}
-                                    <li class="page-item disabled"><a class="page-link"
-                                                                      href="?page=None">Previous</a>
-                                    </li>
-                                {% endif %}
-                                {% for i in page_obj.paginator.page_range %}
-                                    {% if page_obj.number == i %}
-                                        <li class="page-item active"><a class="page-link" href="#">{{ i }}</a></li>
+                        {% endfor %}
+                        <div class="col-12">
+                            <nav>
+                                <ul class="pagination justify-content-center">
+                                    {% if page_obj.has_previous %}
+                                        <li class="page-item"><a class="page-link"
+                                                                 href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                                        </li>
                                     {% else %}
-                                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                                        <li class="page-item disabled"><a class="page-link"
+                                                                          href="?page=None">Previous</a>
+                                        </li>
                                     {% endif %}
-                                {% endfor %}
-                                {% if page_obj.has_next %}
-                                    <li class="page-item"><a class="page-link"
-                                                             href="?page={{ page_obj.next_page_number }}">Next</a></li>
-                                {% else %}
-                                    <li class="page-item disabled"><a class="page-link"
-                                                                      href="?page=None">Next</a>
-                                    </li>
-                                {% endif %}
-                            </ul>
-                        </nav>
-                    </div>
+                                    {% for i in page_obj.paginator.page_range %}
+                                        {% if page_obj.number == i %}
+                                            <li class="page-item active"><a class="page-link" href="#">{{ i }}</a></li>
+                                        {% else %}
+                                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% if page_obj.has_next %}
+                                        <li class="page-item"><a class="page-link"
+                                                                 href="?page={{ page_obj.next_page_number }}">Next</a>
+                                        </li>
+                                    {% else %}
+                                        <li class="page-item disabled"><a class="page-link"
+                                                                          href="?page=None">Next</a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
                 <!-- Shop Product End -->
