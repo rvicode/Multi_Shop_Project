@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 18:36+0330\n"
+"POT-Creation-Date: 2023-02-24 18:55+0330\n"
 "PO-Revision-Date: 2023-02-24 18:46+0330\n"
 "Last-Translator:   <arvin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,7 +86,8 @@ msgstr "محصول"
 msgid "products"
 msgstr "محصولات"
 
-#: .\models.py:62 .\templates\product\product_detail.html:18
+#: .\models.py:62 .\templates\product\all_product.html:17
+#: .\templates\product\product_detail.html:18
 msgid "Product"
 msgstr "محصول"
 
@@ -110,6 +111,15 @@ msgstr "کامنت"
 msgid "Comments"
 msgstr "کامنت ها"
 
+#: .\templates\product\all_product.html:16
+#: .\templates\product\product_detail.html:17
+msgid "Home"
+msgstr "خانه"
+
+#: .\templates\product\all_product.html:18
+msgid "All Product"
+msgstr "همه محصولات"
+
 #: .\templates\product\all_product.html:198
 #: .\templates\product\all_product.html:200
 #: .\templates\product\product_detail.html:48
@@ -121,10 +131,6 @@ msgstr "تومان"
 #: .\templates\product\product_detail.html:19
 msgid "Product Detail"
 msgstr "جزیات محصول"
-
-#: .\templates\product\product_detail.html:17
-msgid "Home"
-msgstr "خانه"
 
 #: .\templates\product\product_detail.html:65
 msgid "Add To Cart"
@@ -139,7 +145,6 @@ msgid "Product Description"
 msgstr "توضیحات محصول"
 
 #: .\templates\product\product_detail.html:89
-#| msgid "Reviews"
 msgid "Review for"
 msgstr "بازدید های "
 
@@ -149,8 +154,7 @@ msgstr "متنی کامنت کنید"
 
 #: .\templates\product\product_detail.html:113
 msgid "Your email address will not be published. Required fields are marked*"
-msgstr ""
-"آدرس ایمیل شما منتشر نخواهد شد. فیلدهای مورد نیاز علامت گذاری شده اند*"
+msgstr "آدرس ایمیل شما منتشر نخواهد شد. فیلدهای مورد نیاز علامت گذاری شده اند*"
 
 #: .\templates\product\product_detail.html:118
 msgid "Your Rating * :"
