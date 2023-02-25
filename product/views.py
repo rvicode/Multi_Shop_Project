@@ -35,13 +35,6 @@ def product_detail_view(request, pk):
                   {'product': product, 'product_list': product_list, 'form': form})
 
 
-# class ProductListView(generic.ListView):
-#     model = Product
-#     template_name = "product/all_product.html"
-#     context_object_name = "product"
-#     paginate_by = 12
-
-
 def product_list_view(request, pk):
     category = get_object_or_404(Category, pk=pk)
     product = Product.objects.filter(category=category)
