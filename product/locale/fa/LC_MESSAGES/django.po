@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 18:55+0330\n"
+"POT-Creation-Date: 2023-02-25 12:26+0330\n"
 "PO-Revision-Date: 2023-02-24 18:46+0330\n"
 "Last-Translator:   <arvin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,23 +18,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\forms.py:7 .\models.py:55
+#: .\forms.py:7 .\models.py:58
 msgid "Bad"
 msgstr "بد"
 
-#: .\forms.py:8 .\models.py:56
+#: .\forms.py:8 .\models.py:59
 msgid "Not Bad"
 msgstr "بدک نیست"
 
-#: .\forms.py:9 .\models.py:57
+#: .\forms.py:9 .\models.py:60
 msgid "Good"
 msgstr "خوب"
 
-#: .\forms.py:10 .\models.py:58
+#: .\forms.py:10 .\models.py:61
 msgid "Very Good"
 msgstr "خیلی خوب"
 
-#: .\forms.py:11 .\models.py:59
+#: .\forms.py:11 .\models.py:62
 msgid "Perfect"
 msgstr "عالی"
 
@@ -46,68 +46,67 @@ msgstr "سلام اسم من ..."
 msgid "Message"
 msgstr "متن"
 
-#: .\forms.py:26 .\models.py:37 .\models.py:64
+#: .\forms.py:26 .\models.py:40 .\models.py:67
 msgid "Score"
 msgstr "نمره"
 
-#: .\models.py:19 .\models.py:32
+#: .\models.py:22 .\models.py:35
 msgid "Category"
 msgstr "دسته بندی"
 
-#: .\models.py:20
+#: .\models.py:23
 msgid "Categorys"
 msgstr "دسته بندی ها"
 
-#: .\models.py:31
+#: .\models.py:34
 msgid "Name Product"
 msgstr "نام محصول"
 
-#: .\models.py:33
+#: .\models.py:36
 msgid "Short Description"
 msgstr "توضیح کوتاه"
 
-#: .\models.py:34 .\templates\product\product_detail.html:77
+#: .\models.py:37 .\templates\product\product_detail.html:76
 msgid "Description"
 msgstr "توضیح"
 
-#: .\models.py:35
+#: .\models.py:38
 msgid "Price"
 msgstr "قیمت"
 
-#: .\models.py:36
+#: .\models.py:39
 msgid "Image"
 msgstr "تصاویر"
 
-#: .\models.py:49
+#: .\models.py:52
 msgid "product"
 msgstr "محصول"
 
-#: .\models.py:50
+#: .\models.py:53
 msgid "products"
 msgstr "محصولات"
 
-#: .\models.py:62 .\templates\product\all_product.html:17
-#: .\templates\product\product_detail.html:18
+#: .\models.py:65 .\templates\product\all_product.html:17
 msgid "Product"
 msgstr "محصول"
 
-#: .\models.py:63
+#: .\models.py:66
 msgid "Massage"
 msgstr "متن"
 
-#: .\models.py:66
+#: .\models.py:69
 msgid "Date Time Created"
 msgstr "تاریخ ساخته شده"
 
-#: .\models.py:67
+#: .\models.py:70
 msgid "Date Time Modified"
 msgstr "تاریخ بروزرسانی"
 
-#: .\models.py:73
+#: .\models.py:76
 msgid "Comment"
 msgstr "کامنت"
 
-#: .\models.py:74
+#: .\models.py:77
 msgid "Comments"
 msgstr "کامنت ها"
 
@@ -122,33 +121,33 @@ msgstr "همه محصولات"
 
 #: .\templates\product\all_product.html:198
 #: .\templates\product\all_product.html:200
-#: .\templates\product\product_detail.html:48
-#: .\templates\product\product_detail.html:159
+#: .\templates\product\product_detail.html:47
+#: .\templates\product\product_detail.html:165
 msgid "$"
 msgstr "تومان"
 
 #: .\templates\product\product_detail.html:7
-#: .\templates\product\product_detail.html:19
+#: .\templates\product\product_detail.html:18
 msgid "Product Detail"
 msgstr "جزیات محصول"
 
-#: .\templates\product\product_detail.html:65
+#: .\templates\product\product_detail.html:64
 msgid "Add To Cart"
 msgstr "اضافه کردن به سبد خرید"
 
-#: .\templates\product\product_detail.html:79
+#: .\templates\product\product_detail.html:78
 msgid "Reviews"
 msgstr "بازدید ها"
 
-#: .\templates\product\product_detail.html:83
+#: .\templates\product\product_detail.html:82
 msgid "Product Description"
 msgstr "توضیحات محصول"
 
-#: .\templates\product\product_detail.html:89
+#: .\templates\product\product_detail.html:88
 msgid "Review for"
 msgstr "بازدید های "
 
-#: .\templates\product\product_detail.html:111
+#: .\templates\product\product_detail.html:110
 msgid "Leave a review"
 msgstr "متنی کامنت کنید"
 
@@ -159,6 +158,14 @@ msgstr "آدرس ایمیل شما منتشر نخواهد شد. فیلدهای 
 #: .\templates\product\product_detail.html:118
 msgid "Your Rating * :"
 msgstr "امتیاز شما"
+
+#: .\templates\product\product_detail.html:132
+msgid "if you want comment please "
+msgstr "اگر میخواهید نظر بگذارید ابتدا ورود کنید"
+
+#: .\templates\product\product_detail.html:132
+msgid "Login"
+msgstr "ورود"
 
 #: .\views.py:26
 msgid "The Comment Was Sent"
