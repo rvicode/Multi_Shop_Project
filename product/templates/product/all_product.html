@@ -186,19 +186,20 @@
                             <div class="product-item bg-light mb-4">
                                 <div class="product-img position-relative overflow-hidden">
                                     <img class="img-fluid w-100" src="{{ products.image.url }}" alt="">
-                                    <div class="product-action">
-                                        <a class="btn btn-outline-dark btn-square" href=""><i
-                                                class="fa fa-shopping-cart"></i></a>
-                                    </div>
+                                    <form method="post" action="{% url 'cart:cart_add' products.id %}">
+                                        {% csrf_token %}
+                                        <div class="product-action">
+                                            <input type="hidden" value="1" name="quantity">
+                                            <button type="submit" class="btn btn-outline-dark btn-square"><i
+                                                    class="fa fa-shopping-cart"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="text-center py-4">
                                     <a class="h6 text-decoration-none text-truncate"
                                        href="{{ products.get_absolute_url }}">{{ products.name_product }}</a>
                                     <div class="d-flex align-items-center justify-content-center mt-2">
                                         <h5>{% translate '$' %}{{ products.price }}</h5>
-                                        <h6 class="text-muted ml-2">
-                                            <del>{% translate '$' %}{{ products.price }}</del>
-                                        </h6>
                                     </div>
                                 </div>
                             </div>

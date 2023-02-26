@@ -55,7 +55,8 @@
                                         <i class="fa fa-minus"></i>
                                     </button>
                                 </div>
-                                <input type="text" class="form-control bg-secondary border-0 text-center" name="quantity" value="1">
+                                <input type="text" class="form-control bg-secondary border-0 text-center"
+                                       name="quantity" value="1">
                                 <div class="input-group-btn">
                                     <button type="button" class="btn btn-primary btn-plus">
                                         <i class="fa fa-plus"></i>
@@ -157,10 +158,14 @@
                         <div class="product-item bg-light">
                             <div class="product-img position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="{{ product.image.url }}" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i
-                                            class="fa fa-shopping-cart"></i></a>
-                                </div>
+                                <form method="post" action="{% url 'cart:cart_add' product.id %}">
+                                    {% csrf_token %}
+                                    <div class="product-action">
+                                        <input type="hidden" value="1" name="quantity">
+                                        <button type="submit" class="btn btn-outline-dark btn-square"><i
+                                                class="fa fa-shopping-cart"></i></button>
+                                    </div>
+                                </form>
                             </div>
                             <div class="text-center py-4">
                                 <a class="h6 text-decoration-none text-truncate"
