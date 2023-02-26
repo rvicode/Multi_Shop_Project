@@ -77,3 +77,9 @@ class Cart:
 
     def get_total_price(self):
         return sum(item['product_obj'].price * item['quantity'] for item in self.cart.values())
+
+    def total_price(self):
+        return "25000"
+
+    def total_costs(self):
+        return int(self.get_total_price()) + int(self.total_price())
