@@ -1,8 +1,8 @@
 from django.core.paginator import Paginator
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, redirect, reverse, HttpResponse
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
-from django.views import generic
+from django.db.models import Q
 
 from .models import Product, Comment, Category
 from .forms import CommentForm
@@ -38,6 +38,15 @@ def product_detail_view(request, pk):
 def product_list_view(request, pk):
     category = get_object_or_404(Category, pk=pk)
     product = Product.objects.filter(category=category)
+    paginator = Paginator(product, 1)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'product/all_product.html', {"product_list": page_obj})
+
+
+def product_search_list_view(request):
+    q = request.GET.get("q")
+    product = Product.objects.filter(Q(name_product=q) | Q(short_description=q))
     paginator = Paginator(product, 1)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)

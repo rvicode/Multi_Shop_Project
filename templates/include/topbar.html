@@ -70,15 +70,15 @@
             </a>
         </div>
         <div class="col-lg-4 col-6 text-left">
-            <form action="">
+            <form method="get" action="{% url 'product:product_search_list' %}">
                 <div class="input-group">
                     <label>
-                        <input type="text" class="form-control" placeholder="Search for products">
+                        <input type="text" name="q" placeholder="Search for products">
                     </label>
                     <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
+                        <button type="submit"><span class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>
-                            </span>
+                            </span></button>
                     </div>
                 </div>
             </form>
