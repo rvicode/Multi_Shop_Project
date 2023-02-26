@@ -6,8 +6,8 @@ from accounts.models import CustomUser
 
 
 class Category(models.Model):
-    title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='CategoryiImage/')
+    title = models.CharField(max_length=200, verbose_name=_("Title"))
+    image = models.ImageField(upload_to='CategoryiImage/', verbose_name=_("Image"))
 
     datetime_created = models.DateTimeField(auto_now_add=True, verbose_name="Date Time Created")
     datetime_modified = models.DateTimeField(auto_now=True, verbose_name="Date Time Modified")
