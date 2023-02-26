@@ -1,13 +1,10 @@
-ode
-
-Blame
 {% extends '_base.html' %}
 
 {% load static %}
 {% load i18n %}
 
 {% block title %}
-    Cart
+    {% translate 'Cart' %}
 {% endblock %}
 
 {% block content %}
@@ -91,14 +88,14 @@ Blame
                     <div class="col-lg-4">
                         <form class="mb-30" action="">
                             <div class="input-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Coupon Code">
+                                <input type="text" class="form-control border-0 p-4" placeholder="{% translate 'Coupon Code' %}">
                                 <div class="input-group-append">
-                                    <button class="btn btn-primary">Apply Coupon</button>
+                                    <button class="btn btn-primary">{% translate 'Apply Coupon' %}</button>
                                 </div>
                             </div>
                         </form>
                         <h5 class="section-title position-relative text-uppercase mb-3">
-                            <span class="bg-secondary pr-3">Cart Summary</span>
+                            <span class="bg-secondary pr-3">{% translate 'Cart Summary' %}</span>
                         </h5>
                         <div class="bg-light p-30 mb-5">
                             <div class="border-bottom pb-2">
