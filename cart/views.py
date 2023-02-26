@@ -40,3 +40,9 @@ def remove_to_cart_view(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     cart.remove(product)
     return redirect('cart:cart_detail')
+
+
+def clear_all_cart_view(request):
+    cart = Cart(request)
+    cart.clear()
+    return redirect('cart:cart_detail')
