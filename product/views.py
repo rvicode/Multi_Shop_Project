@@ -46,8 +46,11 @@ def product_list_view(request, pk):
 
 def product_search_list_view(request):
     q = request.GET.get("q")
-    product = Product.objects.filter(Q(name_product=q) | Q(short_description=q))
+    product = Product.objects.filter(Q(name_product=q) | Q(short_description=q) | Q(description=q))
     paginator = Paginator(product, 1)
+    print(paginator)
     page_number = request.GET.get('page')
+    print(page_number)
     page_obj = paginator.get_page(page_number)
+    print(page_obj)
     return render(request, 'product/all_product.html', {"product_list": page_obj})
