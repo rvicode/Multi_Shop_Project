@@ -47,22 +47,25 @@
                     <h3 class="font-weight-semi-bold mb-4">{% translate '$' %}{{ product.price }}</h3>
                     <p class="mb-4">{{ product.short_description }}</p>
                     <div class="d-flex align-items-center mb-4 pt-2">
-                        <div class="input-group quantity mr-3" style="width: 130px;">
-                            <div class="input-group-btn">
-                                <button class="btn btn-primary btn-minus">
-                                    <i class="fa fa-minus"></i>
-                                </button>
+                        <form method="post" action="{% url 'cart:cart_add' product.id %}">
+                            {% csrf_token %}
+                            <div class="input-group quantity mr-3" style="width: 130px;">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-primary btn-minus">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control bg-secondary border-0 text-center" name="quantity" value="1">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <input type="text" class="form-control bg-secondary border-0 text-center" value="1">
-                            <div class="input-group-btn">
-                                <button class="btn btn-primary btn-plus">
-                                    <i class="fa fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary px-3"><i
-                                class="fa fa-shopping-cart mr-1"></i>{% translate 'Add To Cart' %}
-                        </button>
+                            <button type="submit" class="btn btn-primary px-3"><i
+                                    class="fa fa-shopping-cart mr-1"></i>{% translate 'Add To Cart' %}
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -129,7 +132,8 @@
                                         </form>
                                     {% else %}
                                         <small>
-                                            {% translate 'if you want comment please ' %} <a href="{% url 'account_login' %}">{% translate 'Login' %}</a>
+                                            {% translate 'if you want comment please ' %} <a
+                                                href="{% url 'account_login' %}">{% translate 'Login' %}</a>
                                         </small>
                                     {% endif %}
                                 </div>
