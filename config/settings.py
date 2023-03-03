@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'rosetta',
     'django_cleanup',
+    'phonenumber_field',
 ]
 
 SITE_ID = 1
