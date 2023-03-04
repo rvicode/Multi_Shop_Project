@@ -83,4 +83,3 @@ class Cart:
 
     def total_costs(self):
         return int(self.get_total_price()) + int(self.total_price())
-
