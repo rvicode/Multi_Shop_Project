@@ -46,7 +46,7 @@ def product_list_view(request, pk):
     return render(request, 'product/all_product.html', {"product_list": page_obj})
 
 
-@require_POST
+@require_GET
 def product_search_list_view(request):
     q = request.GET.get("q")
     product = Product.objects.filter(Q(name_product=q) | Q(short_description=q) | Q(description=q))
