@@ -73,18 +73,18 @@ def payment_callback(request):
                 order.zarin_ref_id = data['ref_id']
                 order.zarin_data = data
                 order.save()
-                return redirect('product:product_list')
+                return redirect('home:home')
 
             elif payment_code == 101:
-                return redirect('product:product_list')
+                return redirect('home:home')
 
             else:
                 payment_error = res.json()['errors']['code']
                 payment_message = res.json()['errors']['message']
-                return redirect('product:product_list')
+                return redirect('home:home')
 
         else:
-            return redirect('product:product_list')
+            return redirect('home:home')
 
     else:
-        return redirect('product:product_list')
+        return redirect('home:home')
